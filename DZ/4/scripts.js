@@ -1,4 +1,4 @@
-const place_name = 'Омск'
+const place_name = 'Москва'
 const API_KEY_YANDEX = '85eaff1b-ef9e-4c11-89bc-ca01d1ae43de'
 const API_URL_GEO_DATA = `https://geocode-maps.yandex.ru/1.x/?apikey=${API_KEY_YANDEX}&geocode=${place_name}&format=json`
 
@@ -12,6 +12,7 @@ fetch(API_URL_GEO_DATA)
              fetch(API_OPEN_METEO).then((response) => {
                  return response.json()
              }).then((data) => {
+                 console.log(data)
                  let parent = document.getElementById('air-pollution')
                  if (parent) {
                      let table = document.createElement('table')
@@ -28,7 +29,7 @@ fetch(API_URL_GEO_DATA)
                          th.appendChild(document.createTextNode(i+'['+data.hourly_units[i]+']'))
                          header.appendChild(th)
                      }
-                     for (let i = 0;i < 20; i++) {
+                     for (let i = 0;i < 120; i++) {
                          let row = document.createElement('tr')
                          const td1 = document.createElement('th');
                          let date = Date(data.hourly.time[i]).toString()
