@@ -1,4 +1,4 @@
-const place_name = 'Москва'
+const place_name = 'Омск'
 const API_KEY_YANDEX = '85eaff1b-ef9e-4c11-89bc-ca01d1ae43de'
 const API_URL_GEO_DATA = `https://geocode-maps.yandex.ru/1.x/?apikey=${API_KEY_YANDEX}&geocode=${place_name}&format=json`
 
@@ -6,7 +6,7 @@ const getLineData = (initialData, lengthOfDataChunks) => {
     const numOfChunks = Math.ceil(initialData.length / lengthOfDataChunks);
     const dataChunks = [];
 
-    for (var i = 0; i < numOfChunks; i++) dataChunks[i] = [];
+    for (let i = 0; i < numOfChunks; i++) dataChunks[i] = [];
 
     initialData.forEach((entry, index) => {
         const chunkNumber = Math.floor(index / lengthOfDataChunks);
