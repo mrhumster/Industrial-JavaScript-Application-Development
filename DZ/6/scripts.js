@@ -27,13 +27,7 @@ fetch(API_URL_GEO_DATA)
     .then((response) => {
         return response.json()
     }).then((data) => {
-    let coordinates = data.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos.split(' ')
-    const API_OPEN_METEO = `https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${coordinates[0]}&longitude=${coordinates[1]}&hourly=pm10,pm2_5`
-    if (coordinates) {
-        fetch(API_OPEN_METEO).then((response) => {
-            return response.json()
-        }).then((data) => {
-            console.log(data)
+
             const canvas = document.getElementById('canvas')
             const isoTime = data.hourly.time;
             const pm10 = data.hourly.pm10;
