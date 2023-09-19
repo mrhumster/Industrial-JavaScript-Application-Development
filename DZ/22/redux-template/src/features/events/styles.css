@@ -1,0 +1,65 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add_new_event {
+    width: 400px;
+    padding: 10px;
+    border: 1px #646464 solid;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style-type: none;
+    width: 400px;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px;
+    padding: 10px;
+    border: 1px #646464 solid;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.input {
+    padding: 10px;
+}
+.input label {
+    padding: 10px 10px;
+}
+
+button {
+    margin: 5px;
+}
+
+.event_date {
+    color: #282c34;
+    font-size: 10px;
+    font-weight: lighter;
+    padding-left: 10px;
+}
+
+.event_description {
+    padding: 10px;
+}
+
+input#description {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: #fff;
+    border: 1px solid #646464;
+    border-radius: 4px;
+}

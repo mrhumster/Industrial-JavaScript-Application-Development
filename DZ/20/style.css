@@ -127,3 +127,7 @@ main::-webkit-scrollbar-thumb {
     font-family: Arial, serif;
     text-decoration: none;
 }
+
+.active {
+    text-decoration: underline;
+}
